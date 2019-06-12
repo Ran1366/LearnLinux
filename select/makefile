@@ -1,9 +1,9 @@
-all:server client
-server:server.c
-	gcc $< -o $@ 
-client:client.c
-	gcc $< -o $@
-.PHONY: clean 
+all:select client 
+select:select.cpp
+	g++ $< -o $@ 
+client:client.cpp 
+	g++ $< -o $@ 
+.PHONY:clean
 clean:
-	rm -f server 
+	rm -f select
 	rm -f client
